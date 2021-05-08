@@ -24,4 +24,6 @@ git checkout -b branch-name origin/branch-name 测试
   * 首先 git checkout - 切回上一分支
   * 提交commit更改
   * git checkout - 切回新生成分支 git pull
-  * cc
+  * 直接拉取远程绑定的分支名的代码
+
+总结 git pull 和 git push 拉取和推送的都是绑定的远程分支（origin/branch-name）中的代码（git branch -vv 用来查看绑定的远程分支的名字）
