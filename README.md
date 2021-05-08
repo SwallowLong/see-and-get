@@ -13,3 +13,9 @@ git checkout -b branch-name origin/branch-name 测试
   * git push origin branch-name 
   * git push --set-upstream origin branch-name 绑定远程仓库 
   * 可直接使用 git push 推送
+
+测试 git checkout -b branch-name origin/branch-name 的命令行 git pull 时 拉取时 是否会直接拉取origin/branch-name 上的代码
+  * 首先 git checkout - 切回上一分支
+  * 提交commit更改
+  * git checkout - 切回新生成分支 git pull
+  * 
