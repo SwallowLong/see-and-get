@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>销货单配置问题归类</title>
+</head>
+<body>
+  <h2>销货单（陈珏版）</h2>
+  <main>
+    <h3>问题集合（出现其他值得记录的类型在加）</h3>
+    <ol>
+      <li>当设置默认定制模版时，刷新空白：定制模版设置为默认模版是需要重新绑定一个</li>
+      <li>当切换模版，但发现销货单却没有反应时（即无法切换模版时）：说明是忘记了将定制模版的id绑定到切换模版了，需要在customized_template绑定相应的ID即可</li>
+      <li>当销货单详情报错无法打开或能打开但是切换无反应时：如果报错信息是“You must pass a string or Handlebars AST to Handlebars.compile. You passed undefined” 基本原因是因为样品间ID绑定到了其他的模版 或者是这张样品间忘记了加break 让他走完定制模版后 又走了一遍默认模版 所以报错</li>
+      <li>当需要按照默认模版1数据走，却显示默认模版2、3的数据时：说明忘记了将定制数据特殊处理，让开发在“sale_slip_detail.js”中搜索“skip”即可</li>
+    </ol>
+  </main>
+</body>
+</html>
